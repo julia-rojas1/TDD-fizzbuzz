@@ -1,9 +1,9 @@
 require_relative 'fizzbuzz'
 require 'minitest/autorun'
 
+# Pruebas unitarias para el algoritmo FizzBuzz
 class TestFizzBuzz < Minitest::Test
-
-  def testWithZero
+  def test_with_zero
     assert_equal fizzbuzz(0), 0
   end
 
@@ -21,14 +21,14 @@ class TestFizzBuzz < Minitest::Test
     refute_equal 'Fizz', fizzbuzz(15)
   end
 
-  def test_print_fizz_when_multiple_of_5_only
+  def test_print_fizz_when_multiple_of_five_only
     assert_equal 'Buzz', fizzbuzz(5)
     assert_equal 'Buzz', fizzbuzz(10)
     assert_equal 'Buzz', fizzbuzz(20)
     refute_equal 'Buzz', fizzbuzz(15)
   end
 
-  def test_print_fizz_when_multiple_of_3_and_5
+  def test_print_fizz_when_multiple_of_three_and_five
     assert_equal 'FizzBuzz', fizzbuzz(15)
     assert_equal 'FizzBuzz', fizzbuzz(30)
     assert_equal 'FizzBuzz', fizzbuzz(45)
