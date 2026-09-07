@@ -13,16 +13,21 @@ test('print same number on 1, 2 and 4', () => {
 
 test('print Fizz when number is multiple of 3 but not multiple of 5', () => {
   expect(fizzbuzz(3)).toBe('Fizz');
-  expect('Add more expects for Fizz').toBe(false)
+  expect(fizzbuzz(6)).toBe('Fizz');
+  expect(fizzbuzz(9)).toBe('Fizz');
+  expect(fizzbuzz(12)).toBe('Fizz');
+  expect(fizzbuzz(15)).not.toBe('Fizz');
 });
 
 test('print Buzz when number is multiple of 5 but not multiple of 3', () => {
   expect(fizzbuzz(5)).toBe('Buzz');
-  expect('Add more expects for Buzz').toBe(false);
+  expect(fizzbuzz(10)).toBe('Buzz');
+  expect(fizzbuzz(20)).toBe('Buzz');
+  expect(fizzbuzz(15)).not.toBe('Buzz');
 });
 
 test('print FizBuzz when number is multiple of 3 and 5', () => {
-  expect('To be done').toBe(false);
+  expect(fizzbuzz(15)).toBe('FizzBuzz');
+  expect(fizzbuzz(30)).toBe('FizzBuzz');
+  expect(fizzbuzz(45)).toBe('FizzBuzz');
 });
-
-

@@ -14,20 +14,23 @@ class TestFizzBuzz < Minitest::Test
   end
 
   def test_print_fizz_when_multiple_of_three_only
-    assert_equal fizzbuzz(3), 'Fizz'
-    refute_equal fizzbuzz(15), 'Fizz'
-    assert_empty 'Add more tests for Fizz'
+    assert_equal 'Fizz', fizzbuzz(3)
+    assert_equal 'Fizz', fizzbuzz(6)
+    assert_equal 'Fizz', fizzbuzz(9)
+    assert_equal 'Fizz', fizzbuzz(12)
+    refute_equal 'Fizz', fizzbuzz(15)
   end
 
   def test_print_fizz_when_multiple_of_5_only
-    assert_equal fizzbuzz(5), 'Buzz'
-    refute_equal fizzbuzz(15), 'Buzz'
-    assert_empty 'Add more tests for Buzz'
+    assert_equal 'Buzz', fizzbuzz(5)
+    assert_equal 'Buzz', fizzbuzz(10)
+    assert_equal 'Buzz', fizzbuzz(20)
+    refute_equal 'Buzz', fizzbuzz(15)
   end
 
   def test_print_fizz_when_multiple_of_3_and_5
-      assert_empty 'To be done'
+    assert_equal 'FizzBuzz', fizzbuzz(15)
+    assert_equal 'FizzBuzz', fizzbuzz(30)
+    assert_equal 'FizzBuzz', fizzbuzz(45)
   end
 end
-
-
